@@ -12,11 +12,12 @@ import MenuItem from '@mui/material/MenuItem';
 import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import ToggleColorMode from './ToogleColorMode';
+import Link from 'next/link';
 
 const logoStyle = {
   width: '140px',
   height: 'auto',
-  cursor: 'pointer',
+  cursor: 'pointer'
 };
 
 function AppAppBar({ mode, toggleColorMode }) {
@@ -85,7 +86,7 @@ function AppAppBar({ mode, toggleColorMode }) {
             >
               <img
                 src={
-                  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73568658154dae_SitemarkDefault.svg'
+                  '/logo.png'
                 }
                 style={logoStyle}
                 alt="logo of sitemark"

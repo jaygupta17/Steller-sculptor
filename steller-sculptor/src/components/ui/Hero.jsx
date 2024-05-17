@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import Link from 'next/link';
 
 export default function Hero() {
   return (
@@ -13,9 +14,7 @@ export default function Hero() {
       sx={(theme) => ({
         width: '100%',
         backgroundImage:
-          theme.palette.mode === 'light'
-            ? 'linear-gradient(180deg, #CEE5FD, #FFF)'
-            : `linear-gradient(#02294F, ${alpha('#090E10', 0.0)})`,
+          theme.palette.mode === 'dark' && `linear-gradient(#02294F, ${alpha('#090E10', 0.0)})`,
         backgroundSize: '100% 20%',
         backgroundRepeat: 'no-repeat',
       })}
@@ -70,7 +69,7 @@ export default function Hero() {
             sx={{ pt: 2, width: { xs: '100%', sm: 'auto' } }}
           >
             <Button variant="contained" color="primary">
-              Start now
+              <Link href="/space">Explore</Link>
             </Button>
           </Stack>
         </Stack>
